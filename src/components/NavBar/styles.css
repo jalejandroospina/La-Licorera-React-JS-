@@ -1,0 +1,40 @@
+
+  /* Style the links inside the pill navigation menu */
+.menu {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 3px;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+/* Change the color of links on mouse-over */
+.menu:hover {
+  background-color: orange;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.menu.active {
+  background-color: orange;
+  color: black;
+}
+.pill-nav
+{
+  background-color: rgb(117, 59, 32);
+}
+.logo{
+  display: inline-block;
+  color: orange;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  margin-left: 40px;
+  margin-right: 190px;
+ 
+
+  
+}

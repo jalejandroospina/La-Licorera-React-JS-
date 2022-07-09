@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Banners from './components/Banners';
+import NavBar from './components/NavBar/';
 
 function App() {
+  const temp = 20;
+  const spanStyles =
+  {
+    margin : 12,
+    fontSize : 24,
+  }
+
   return (
-        <div className="App">
-    <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome !
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <NavBar/>
+        <Banners/>
+       
+    </>
   );
 }
 
