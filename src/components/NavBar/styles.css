@@ -34,7 +34,9 @@
   margin: 10px;
   margin-left: 40px;
   margin-right: 190px;
- 
-
-  
 }
+.logo:hover
+{
+  color: white;
+}
+
