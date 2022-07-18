@@ -1,10 +1,11 @@
 
 import './App.css';
-import Banners from './components/Banners';
-import NavBar from './components/NavBar/';
-import Footer from './components/Footer/';
-import ItemListContainer from './Container/ItemListContainer/'
-import CartWidget from './components/CartWidget';
+import Banners from './components/Banners/Banners';
+import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
+import ItemListContainer from './Container/ItemListContainer/ItemListContainer'
+import CartWidget from './components/CartWidget/CartWidget';
+import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
   const temp = 20;
@@ -17,9 +18,10 @@ function App() {
   return (
     <>
         <NavBar/>
-        <ItemListContainer greeting ={"Prop Enviada"}/>
-        <Banners/>
-        <Footer/>
+        {/* <ItemListContainer greeting ={"Prop Enviada"}/> */}
+        {/* <Banners/> */}
+        <ItemCount cant={1}/>
+        {/* <Footer/> */}
        
     </>
   );

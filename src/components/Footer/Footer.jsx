@@ -1,6 +1,6 @@
 import React from 'react'
-import '../Footer/styles.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../Footer/Footer_styles.css';
+
 
 export default function Footer () 
  {

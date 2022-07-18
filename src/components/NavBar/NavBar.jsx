@@ -1,7 +1,6 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../NavBar/styles.css';
-import CartWidget from "../CartWidget";
+import '../NavBar/NavBar_styles.css';
+import CartWidget from "../CartWidget/CartWidget";
 
 
 
