@@ -1,5 +1,6 @@
 
 import './App.css';
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Banners from './components/Banners/Banners';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
@@ -17,11 +18,14 @@ function App() {
 
   return (
     <>
-        <NavBar/>
-        {/* <ItemListContainer greeting ={"Prop Enviada"}/> */}
-        {/* <Banners/> */}
-        <ItemCount cant={1}/>
-        {/* <Footer/> */}
+       
+        <NavBar/> 
+        <Banners/> 
+        <ItemListContainer greeting ={"Prop Enviada"}/> 
+        
+        {/* <ItemCount cant={1}/> */}
+        <Footer/>
+       
        
     </>
   );

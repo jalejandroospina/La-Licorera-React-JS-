@@ -1,0 +1,44 @@
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 320px;
+    margin: 20px;
+    text-align: center;
+    font-family:"arial" ;
+  }
+  
+  .price {
+    color: red;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .product
+{
+    color: rgb(117, 59, 32);
+    font-weight:bold;
+}
+.description
+{
+   
+   font-size: larger;
+   
+}
+  
+  .card button {
+    border: none;
+    border-radius: 6px;
+    outline: 0;
+    padding: 12px;
+    color: black;
+    background-color: orange;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    
+    background-color:rgb(117, 59, 32);
+    color: white;
+  }

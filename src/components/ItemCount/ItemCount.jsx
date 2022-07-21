@@ -42,14 +42,14 @@ const addCart = ()=>
         </span>
 
         <button onClick={add}
-            type="button" class="btn btn-primary">+
+            type="button" className="btn btn-primary">+
         </button>
 
         <button  onClick={addCart}
             style={{
                 margin:'50px'
             }}
-            type="button" class="btn btn-warning">Agregar Al Carrito
+            type="button" className="btn btn-warning">Agregar Al Carrito
         </button> 
         
     </div>

@@ -8,3 +8,12 @@
     color: white;
     text-align: center;
 }
+.by
+{
+    text-decoration: none;
+    color: white;
+}
+.by:hover
+{
+    color:black;
+}
