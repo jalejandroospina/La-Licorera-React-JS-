@@ -5,6 +5,7 @@ import Banners from './components/Banners/Banners';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import ItemListContainer from './Container/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailContainer'
 import CartWidget from './components/CartWidget/CartWidget';
 import ItemCount from './components/ItemCount/ItemCount';
 
@@ -19,12 +20,13 @@ function App() {
   return (
     <>
        
-        <NavBar/> 
-        <Banners/> 
-        <ItemListContainer greeting ={"Prop Enviada"}/> 
-        
+       <NavBar/> 
+       {/* <Banners/> */}
+        {/* <ItemListContainer greeting ={"Prop Enviada"}/>   */}
         {/* <ItemCount cant={1}/> */}
-        <Footer/>
+        <ItemDetailContainer/> 
+
+        {/* <Footer/> */}
        
        
     </>

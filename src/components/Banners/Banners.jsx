@@ -1,5 +1,5 @@
 import React from 'react'
-import Carousel from 'react-bootstrap/Carousel';
+
 import Wisky from '../../images/Wisky-Banner.jpg' 
 import Vodka from '../../images/Vodka-Banner.jpg'
 import Beer from '../../images/Beer-Banner.jpg' 
@@ -9,26 +9,39 @@ import '../Banners/Banners_styles.css';
 export default function Banners()
 {
   return (
-    
-    
+    <>
+    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
 
-     <Carousel>
-       <Carousel.Item>
-       <img  className='banner' src={Wisky} alt="" />
-       </Carousel.Item>
-       <Carousel.Item>
-       <img  className='banner' src={Beer} alt="" />
-       </Carousel.Item>
-       <Carousel.Item>
-       <img  className='banner' src={Vodka} alt="" />
-       </Carousel.Item>
-     </Carousel>
-     
-  
+      <div className="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
 
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <img src={Wisky} className="d-block w-100" alt="Wiskey"/>
+        </div>
+        <div className="carousel-item">
+          <img src={Vodka} className="d-block w-100" alt="..."/>
+        </div>
+        <div className="carousel-item">
+          <img src={Beer} className="d-block w-100" alt="..."/>
+        </div>
+      </div>
 
-    
-   
+      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+
+      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+
+    </div>
+
+    </>
   )
-
 }

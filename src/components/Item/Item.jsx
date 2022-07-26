@@ -12,8 +12,6 @@ const Item = ({product}) =>  // recibe prop producto
 <div className="">
 
     <div className="card">
-        
-        {/* Corregir ruta imagen */}
         <img src={product.image} alt="Product" /> 
         <h2 className='product'>{product.name}</h2>
         <p className="description">{product.description}</p>

@@ -1,0 +1,38 @@
+.img-product
+{
+    width: 500px;
+    height: 500px;
+    margin-right: 100px;
+    
+}
+.price 
+{
+    color: red;
+    font-weight: bold;
+    font-size: 22px;
+}
+.product
+{
+    color: rgb(117, 59, 32);
+    font-weight:bold;
+}
+.description
+{
+     
+    font-size: larger;
+     
+}
+.feactures
+{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:center;
+    text-align:left;
+    margin-top: 120px;
+    
+    
+   
+    
+}
+
