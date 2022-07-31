@@ -4,7 +4,6 @@ export const productsData =
         "id":1,
         "name":"Corona Extra",
         "image":require("../images/Products/Corona.png"),
-        
         "description":"Six Pack x 350ml",
         "price": 22.900,
         "category":"beer"

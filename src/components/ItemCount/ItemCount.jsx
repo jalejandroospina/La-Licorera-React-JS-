@@ -27,7 +27,8 @@ const addCart = ()=>
   return (
     <>
     <div style={{
-        marginTop:'50px',
+        marginTop:'60px',
+        marginBottom: '60px'
         
     }}>
         <button onClick={decrement}
@@ -37,7 +38,7 @@ const addCart = ()=>
         <span
             style={{
                 fontSize:'120%',
-                margin: '30px'
+                margin: '35px'
             }}
             >{cant}
         </span>
@@ -49,7 +50,9 @@ const addCart = ()=>
 
         <button  onClick={addCart}
             style={{
-                margin:'5px'
+                marginTop:'7px',
+                
+                
             }}
             type="button" className="btn btn-warning">Agregar Al Carrito
         </button> 

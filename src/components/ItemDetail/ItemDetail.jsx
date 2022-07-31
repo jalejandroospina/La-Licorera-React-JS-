@@ -8,10 +8,10 @@ const ItemDetail = ({ productDetail }) => {
     if (productDetail !== null) {
         return (
             <>
-                <div className="container text-center">
+                <div className="container text-center m-5">
                     <div className="row">
-                        <div className="col  ">
-                        <img className="img-product" src={productDetail.image} alt="productDetail" /> 
+                        <div className="col">
+                        <img className="img-product" src={productDetail.image} alt="Img Product" /> 
                         </div>
                         <div className="col">
                             <div className='feactures'>
