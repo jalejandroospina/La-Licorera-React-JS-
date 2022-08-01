@@ -1,29 +1,28 @@
 import React , {useState} from 'react'
 
-const ItemCount = () => {
+const ItemCount = ({stock, handleAddCart}) => {
     const [cant,setCant]= useState(1)
 
 const decrement = ()=>
 {
-    
-    if (cant>1)
+    if (cant>stock)
     {
         setCant (cant - 1)
-    }
-    
+    } 
 }
 const add = ()=>
 {
-    if(cant<10)
+    if(cant<stock)
     {
         setCant (cant + 1)
     }
     
 }
-const addCart = ()=>
-{
-    alert(`Agregado al carrito ${cant} productos`);
-}
+// const addCart = ()=>
+// {
+//     alert(`Agregado al carrito ${cant} productos`);
+// }
+
   return (
     <>
     <div style={{
@@ -48,7 +47,7 @@ const addCart = ()=>
         </button>
 
 
-        <button  onClick={addCart}
+        <button  onClick={() => handleAddCart(cant)}
             style={{
                 marginTop:'7px',
                 
