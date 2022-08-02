@@ -1,45 +1,44 @@
-
 import React , {useState, useEffect} from 'react'
 import ItemList from '../../components/ItemList/ItemList'
-
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({greeting}) => {
 
   // const [state, setState]= useState ('Estado inicial') 
   //     //variable,funcion setear estado = hook (valor inicial del estado)
 
-      const [products, setProducts] = useState([]) // estado para setear los productos
+      const [products, setProducts] = useState([]) // estado para setear la lista con los productos
+      const [productByCategory, setProductByCategory] = useState([]) //estado para setear la lista con los productos por categoria
 
-      //const {categoryId} = useParams();
+      const {categoryId} = useParams(); // obtener prop categoria
       //console.log(categoryId);
-
-      // const getProducts = new Promise ((accept, reject)=> // promesa para traer los productos
-      // {
-      //   setTimeout(()=>
-      //   {
-      //     accept(productsData)  // estado de aceptación y tiempo de espera 1 seg
-      //   }, 1000)
-      // })
-
-      // getProducts 
-      // .then (result =>
-      //   {
-      //     setProducts(result)
-      //   })
-      // .catch(error=>
-      //   {
-      //     alert(`Error: ${error}`)
-      //   }) 
+ 
       useEffect(()=> 
       {
-
         const getProducts = async()=> 
           {
               try 
               {
+                if(products.length === 0)
+                {
                   const response = await fetch(`/Mocks/products.json`) // fetch para traer el js de los productos
                   const productsData = await response.json();
-                  setProducts(productsData); // seteo de estado con detalle de cada producto           
+                  setProducts(productsData);
+
+                }
+                else
+                {
+                  let categoryFilter = [...products]; // array para pushear los productos por categoria
+                  if(categoryId)
+                  {
+                    categoryFilter = products.filter(product => product.category == categoryId) // filtro por categoria
+                  } 
+                  setProductByCategory(categoryFilter); // seteo de estado con la lista de  productos           
+                }
+                
+                
+                  
+                
               } 
               catch (error) 
               {
@@ -48,9 +47,8 @@ const ItemListContainer = ({greeting}) => {
           }
           getProducts(); 
         
-      }, [])
+      }, [categoryId, products])
         
-
   return (
     // <div>
     //   {/* <p>{greeting}</p>
@@ -58,10 +56,8 @@ const ItemListContainer = ({greeting}) => {
     //   <ItemCount/> */}
     // </div>
       <ItemList products={products}/>
-
-
-   
   )
 }
 
 export default ItemListContainer
+

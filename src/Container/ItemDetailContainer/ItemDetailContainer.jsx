@@ -5,11 +5,9 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
 
-    const [productsDetail, setProductsDetail] = useState(null) // estado para setear los productos
-
+    const [productDetail, setProductDetail] = useState(null) // estado para setear los productos
     const {itemId} = useParams();
-    console.log("id de use params =",itemId);
-
+    
     useEffect(()=> 
     {
         const getProductDetail = async()=> 
@@ -19,23 +17,25 @@ const ItemDetailContainer = () => {
                 // https://pokeapi.co/api/v2/pokemon/93
                 const response= await fetch(`/Mocks/products.json`) // fetch para traer el js de los productos
                 const productsData = await response.json();
-                setProductsDetail(productsData); // seteo de estado con detalle de cada producto
-                console.log("Array de productos =",productsData)
-                console.log("id dentro del try =",itemId)
+
                 let itemFilter = productsData.filter(product => product.id == itemId)
+
+                setProductDetail(itemFilter); // seteo de estado con detalle de cada producto
                 console.log("array del filter =", itemFilter)
-                      
-            } catch (error) 
+                     
+                
+            }
+            
+            catch (error) 
             {
                 alert(`Error: ${error.message}`)
             }
-        }
+        } 
         getProductDetail();
     },[itemId])
   return (
-    <ItemDetail productDetail={productsDetail}/>   
+    <ItemDetail productDetail={productDetail}/>   
 
   )
 }
-
 export default ItemDetailContainer

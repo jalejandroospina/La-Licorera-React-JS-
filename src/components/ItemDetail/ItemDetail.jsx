@@ -4,24 +4,20 @@ import './ItemDetail_styles.css'
 import ItemCount from '../ItemCount/ItemCount'
 
 
-
 const ItemDetail = ({ productDetail }) => {
 
     const navigate = useNavigate()
-
-     
     const [cant, setCantAdd]= useState (0) // estado para contorlar la cantidad agregada
 
     const OnAddCart =(cant)=>
-    {
-        
+    { 
         console.log("Agregado(s) al carrito",cant);
         setCantAdd(cant);
     }
-    const onConfirm = () => {
+    const onConfirm = () => 
+    {
         navigate('/cart')
     }
-    
 
     if (productDetail !== null) {
         return (
@@ -29,7 +25,8 @@ const ItemDetail = ({ productDetail }) => {
                 <div className="container text-center m-5">
                     <div className="row">
                         <div className="col">
-                        <img className="img-product" src={productDetail.image} alt="Img Product" /> 
+                        <img className="img-product" src={productDetail.image} alt="Imge Product" /> 
+                        {console.log(productDetail.image)}
                         </div>
                         <div className="col">
                             <div className='feactures'>
@@ -50,7 +47,6 @@ const ItemDetail = ({ productDetail }) => {
                     </div>
 
             </>
-     
         )
     }
     return (
