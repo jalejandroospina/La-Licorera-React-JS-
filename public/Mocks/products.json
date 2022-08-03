@@ -3,7 +3,7 @@
     {
         "id":1,
         "name":"Corona Extra",
-        "image":"./images/Products/Corona.png",
+        "image":"/images/Products/Corona.png",
         "description":"Six Pack x 350ml",
         "price": "22.900",
         "category":"cerveza"
@@ -13,7 +13,7 @@
     {
         "id":2,
         "name":"Stella Artois",
-        "image":"./images//Products/Stella.png",
+        "image":"/images//Products/Stella.png",
         "description":"Six Pack x 330ml",
         "price": "24.900",
         "category":"cerveza"
@@ -23,7 +23,7 @@
     {
         "id":3,
         "name":"Heineken",
-        "image":"./images/Products/Heineken.png",
+        "image":"/images/Products/Heineken.png",
         "description":"Six Pack Lata x 269 ml",
         "price": "13.900",
         "category":"cerveza"
@@ -32,7 +32,7 @@
     {
         "id":4,
         "name":"Zacapa",
-        "image":"./images/Products/Zacapa.png",
+        "image":"/images/Products/Zacapa.png",
         "description":"Botella x 750 ml",
         "price": "99.900",
         "category":"ron"
@@ -41,7 +41,7 @@
     {
         "id":5,
         "name":"Havana Club",
-        "image":"./images/Products/Havana-club.png",
+        "image":"/images/Products/Havana-club.png",
         "description":"Botella x 750 ml",
         "price":"83.900",
         "category":"ron"
@@ -50,7 +50,7 @@
     {
         "id":6,
         "name":"Bacardi",
-        "image":"./images/Products/Bacardi.png",
+        "image":"/images/Products/Bacardi.png",
         "description":"Botella x 750 ml",
         "price":"52.900",
         "category":"ron"
@@ -59,7 +59,7 @@
     {
         "id":7,
         "name":"Olmeca",
-        "image":"./images/Products/olmeca.png",
+        "image":"/images/Products/olmeca.png",
         "description":"Botella x 700 ml",
         "price":"69.900",
         "category":"tequila"
@@ -68,7 +68,7 @@
     {
         "id":8,
         "name":"Jose Cuervo",
-        "image":"./images/Products/Jose-cuervo.png",
+        "image":"/images/Products/Jose-cuervo.png",
         "description":"Botella x 700 ml",
         "price":"72.900",
         "category":"tequila"
@@ -77,7 +77,7 @@
     {
         "id":9,
         "name":"Don Julio",
-        "image":"./images/Products/Don-julio.png",
+        "image":"/images/Products/Don-julio.png",
         "description":"Botella x 700 ml",
         "price":"209.900",
         "category":"tequila"
@@ -86,7 +86,7 @@
     {
         "id":10,
         "name":"Absolut",
-        "image":"./images/Products/absolut.png",
+        "image":"/images/Products/absolut.png",
         "description":"Botella x 700 ml",
         "price":"70.900",
         "category":"vodka"
@@ -95,7 +95,7 @@
     {
         "id":11,
         "name":"Smirnoff",
-        "image":"./images/Products/smirnoff.png",
+        "image":"/images/Products/smirnoff.png",
         "description":"Botella x 700 ml",
         "price":"74.900",
         "category":"vodka"
@@ -104,7 +104,7 @@
     {
         "id":12,
         "name":"Finlandia",
-        "image":"./images/Products/Finlandia.png",
+        "image":"/images/Products/Finlandia.png",
         "description":"Botella x 700 ml",
         "price":"64.900",
         "category":"vodka"
@@ -113,7 +113,7 @@
     {
         "id":13,
         "name":"JW Red Label",
-        "image":"./images/Products/Red-label.png",
+        "image":"/images/Products/Red-label.png",
         "description":"Botella x 700 ml",
         "price":"57.900",
         "category":"whisky"
@@ -122,7 +122,7 @@
     {
         "id":14,
         "name":"Buchanan's",
-        "image":"./images/Products/Buchanans.png",
+        "image":"/images/Products/Buchanans.png",
         "description":"Botella x 750 ml",
         "price":"135.900",
         "category":"whisky"
@@ -131,7 +131,7 @@
     {
         "id":15,
         "name":"Something Special",
-        "image":"./images/Products/Something.png",
+        "image":"/images/Products/Something.png",
         "description":"Botella x 750 ml",
         "price":"70.900",
         "category":"whisky"
