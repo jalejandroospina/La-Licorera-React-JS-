@@ -20,7 +20,7 @@ export default function NavBar()
             <span> <Link to="category/tequila" className="menu">Tequila</Link> </span>
             <span> <Link to="category/vodka" className="menu">Vodka</Link> </span>
             <span> <Link to="category/whisky" className="menu">Whisky</Link> </span>
-
+            
             <CartWidget/> 
 
         </div> 

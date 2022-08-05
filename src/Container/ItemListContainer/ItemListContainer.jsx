@@ -1,6 +1,7 @@
 import React , {useState, useEffect} from 'react'
 import ItemList from '../../components/ItemList/ItemList'
 import { useParams } from 'react-router-dom';
+import {db} from '../../Firebase/config'
 
 const ItemListContainer = () => {
 
@@ -19,6 +20,7 @@ const ItemListContainer = () => {
           {
               try 
               {
+                console.log(db);
                 if(products.length === 0) // filtro lista de productos
                 {
                   const response = await fetch(`/Mocks/products.json`) // fetch para traer el js de los productos
@@ -47,7 +49,7 @@ const ItemListContainer = () => {
           }
           getProducts(); 
         
-      }, [categoryId, products])
+      }, [categoryId])
         
   return (
     // <div>

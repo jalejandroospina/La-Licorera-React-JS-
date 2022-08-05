@@ -8,6 +8,10 @@ import ItemListContainer from './Container/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailContainer'
 import CartWidget from './components/CartWidget/CartWidget';
 import ItemCount from './components/ItemCount/ItemCount';
+import NotFound from './components/PageNotFound/NotFound';
+import ShopProvider from './context/Shop'; 
+import CartContainer from './Container/CartContainer/CartContainer';
+
 
 function App() {
   const temp = 20;
@@ -19,17 +23,21 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <NavBar/> 
-       {/* <Banners/>  */}
-          <Routes> 
-            <Route path='/' element={<ItemListContainer/> }> </Route> 
-            <Route path='/category/:categoryId' element={<ItemListContainer/>}> </Route> 
-            <Route path='/item/:itemId' element={<ItemDetailContainer/>}> </Route> 
-          </Routes>
-          {/* <ItemCount cant={1}/> */}
-        <Footer/>
-      </BrowserRouter>
+      <ShopProvider>
+        <BrowserRouter>
+          <NavBar/> 
+        {/* <Banners/>  */}
+            <Routes> 
+              <Route path='/' element={<ItemListContainer/> }> </Route> 
+              <Route path='/category/:categoryId' element={<ItemListContainer/>}> </Route> 
+              <Route path='/item/:itemId' element={<ItemDetailContainer/>}> </Route> 
+              <Route path='/cart' element={<CartContainer/>}> </Route> 
+              <Route path='*' element={<NotFound/>}> </Route> 
+            </Routes>
+            {/* <ItemCount cant={1}/> */}
+          <Footer/>
+        </BrowserRouter>
+      </ShopProvider>
        
        
     </>
