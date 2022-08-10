@@ -1,6 +1,6 @@
 import React from 'react'
 import './Item_styles.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 
 
@@ -13,6 +13,8 @@ const Item = ({product}) =>  // recibe prop producto
   const handleNavigate = (id) =>
   {
     navigate(`item/${id}`)
+
+   
   }
   
 

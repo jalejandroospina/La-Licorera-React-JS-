@@ -8,3 +8,13 @@
     width: 100vw;
     height: 90vh;
 }
+
+.product-feactures
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   flex-wrap: wrap;
+
+}

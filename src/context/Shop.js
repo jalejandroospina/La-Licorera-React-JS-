@@ -1,13 +1,16 @@
-import  React, { createContext, useState } from "react";
+import  React, { createContext, useState , useEffect } from "react";
 
 
-export const ShopData = createContext(); // creción de contexto
+export const ShopData = createContext(); // creación de contexto
 
 const ShopProvider = ({children}) => {  // funcion (componente) de proveedor del contexto   
+
 const  [cart,setCart] = useState([]); // definicion estado carrito
+const [total, setTotal] = useState(0);
+const [totalItems, setTotalItems] = useState(0);
 
 
-const isInCart =(productId) =>  //funcion para ver si el item ya esta en el acarrito
+const isInCart =(productId) =>  //funcion para ver si el item ya esta en el carrito
     {
         const productInCart = cart.find(product => product.id === productId)
 
@@ -17,11 +20,11 @@ const isInCart =(productId) =>  //funcion para ver si el item ya esta en el acar
 
 const addItem =  (item,cant)=>
 {
-    console.log("vars recibidas",item,cant)
+    // console.log("vars recibidas",item,cant)
     const quant = cant; // variable para distinguir de la propiedad del item count
 
     const finder = isInCart(item.id) // llamo a la funcion y le paso el id que viene del detail
-    console.log(finder);
+    // console.log(finder);
 
     // 1. si se encuentra el producto ya agregado al carrito, entonces...
     if (finder)    
@@ -48,20 +51,41 @@ const addItem =  (item,cant)=>
 
 }
 
-const removeItem = (ItemId)=>  //Metodo para eliminar elementos del carrito
-{
-    const cartFilter = cart.filter(product => product.id !==ItemId); // filtro por elemento (si es diferente..)
-    setCart(cartFilter); // seteo el carrito con el filtro
-}
+    const removeItem = (ItemId)=>  //Metodo para eliminar elementos del carrito
+    {
+        const cartFilter = cart.filter(product => product.id !==ItemId); // filtro por elemento (si es diferente..)
+        setCart(cartFilter); // seteo el carrito con el filtro
+    }
 
-const ClearCart = () =>  // Metodo para limpiar e lcarrito
-{
-    setCart([])
-}
+    const ClearCart = () =>  // Metodo para limpiar e lcarrito
+    {
+        setCart([])
+    }
+
+    useEffect(() => {
+        const total = cart.reduce((accumulator, currentProduct) => 
+            accumulator = accumulator + currentProduct.cant * currentProduct.price,
+            0)
+        setTotal(total)
+    }, [cart])
+
+    useEffect(() => {
+        const totalItems = cart.reduce((accumulator, currentProduct) => 
+            accumulator = accumulator +  currentProduct.cant,
+            0)
+        setTotalItems(totalItems)
+    }, [cart])
+
+
+
+
+
+
+
 
     return(
                             //retorno del proveedor con la funcion 
-    <ShopData.Provider value = {{addItem, removeItem, ClearCart}}>  
+    <ShopData.Provider value = {{addItem, removeItem, ClearCart,cart,setCart, total, totalItems}}>  
         {children}     
     </ShopData.Provider>    
     )

@@ -20,7 +20,7 @@ const ItemListContainer = () => {
           {
               try 
               {
-                console.log(db);
+                // console.log(db);
                 if(products.length === 0) // filtro lista de productos
                 {
                   const response = await fetch(`/Mocks/products.json`) // fetch para traer el js de los productos

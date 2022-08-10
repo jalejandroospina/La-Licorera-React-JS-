@@ -20,8 +20,8 @@ const ItemDetailContainer = () => {
 
                 let itemFilter = productsData.filter(product => product.id == itemId)
 
-                setProductDetail(itemFilter[0]); // seteo de estado con detalle de cada producto (accedo al objeto del array)
-                console.log("array del filter =", itemFilter)
+                setProductDetail(itemFilter[0]); // seteo de estado con detalle de cada producto (accedo al indice del array)
+                // console.log("array del filter =", itemFilter)
                      
                 
             }
