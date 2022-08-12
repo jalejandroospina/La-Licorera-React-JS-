@@ -28,10 +28,12 @@ const Item = ({product}) =>  // recibe prop producto
 <div className="">
 
     <div className="card">
+    <p className='category'>{product.category}</p>
         <img src={product.image} alt="Product" /> 
+        
         <h2 className='product'>{product.name}</h2>
         <p className="description">{product.description}</p>
-        <p className="price">${product.price}</p>
+        <p className="price">COP ${product.price}</p>
         
         <p><button className="" onClick={()=>handleNavigate(product.id)}>Ver Producto</button></p>
     </div> 

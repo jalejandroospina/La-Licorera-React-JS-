@@ -23,6 +23,13 @@
    font-size: larger;
    
 }
+.category
+{
+  font-style: italic ;
+  margin-right: 120px;
+  background-color:  rgb(117, 59, 32); ;
+  color: white;
+}
   
   .card button {
     border: none;

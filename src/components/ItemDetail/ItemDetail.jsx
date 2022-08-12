@@ -38,7 +38,7 @@ const ItemDetail = ({ productDetail }) => {
                                 <h3 className='product'>{productDetail.name}</h3>
                                 <p> {productDetail.category}</p>
                                 <h4 className='description'>{productDetail.description}</h4>
-                                <p className='price'>${productDetail.price}</p>
+                                <p className='price'>COP ${productDetail.price}</p>
                                 {
                                 cant === 0 ?
                                 <ItemCount stock={10} handleAddCart={OnAddCart}/>
