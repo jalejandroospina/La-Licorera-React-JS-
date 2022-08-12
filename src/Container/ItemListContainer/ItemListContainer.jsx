@@ -3,6 +3,7 @@ import ItemList from '../../components/ItemList/ItemList'
 import { useParams } from 'react-router-dom';
 import {db} from '../../Firebase/config'
 import { collection, query, getDocs } from "firebase/firestore";
+import Banners from '../../components/Banners/Banners'
 
 const ItemListContainer = () => {
   console.log(db);
@@ -64,12 +65,11 @@ const ItemListContainer = () => {
       }, [categoryId])
         
   return (
-    // <div>
-    //   {/* <p>{greeting}</p>
-    //   <h3>{state}</h3>
-    //   <ItemCount/> */}
-    // </div>
-      <ItemList products={products}/>
+    <>
+    <Banners/>
+    <ItemList products={products}/>
+    
+    </>
   )
 }
 
