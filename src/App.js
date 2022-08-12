@@ -26,7 +26,7 @@ function App() {
       <ShopProvider>
         <BrowserRouter>
           <NavBar/> 
-        {/* <Banners/>  */}
+         {/* <Banners/>  */}
             <Routes> 
               <Route path='/' element={<ItemListContainer/> }> </Route> 
               <Route path='/category/:categoryId' element={<ItemListContainer/>}> </Route> 

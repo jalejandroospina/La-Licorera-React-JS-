@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect , useState} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../../Firebase/config';
 
 const ItemDetailContainer = () => {
 
@@ -15,15 +17,18 @@ const ItemDetailContainer = () => {
             try 
             {
                 // https://pokeapi.co/api/v2/pokemon/93
-                const response= await fetch(`/Mocks/products.json`) // fetch para traer el js de los productos
-                const productsData = await response.json();
-
-                let itemFilter = productsData.filter(product => product.id == itemId)
-
-                setProductDetail(itemFilter[0]); // seteo de estado con detalle de cada producto (accedo al indice del array)
-                // console.log("array del filter =", itemFilter)
-                     
+                const docRef = doc(db,"products", itemId) // query a Firebase, item dinamico
+                const docSnap = await getDoc(docRef); // llamada a Firebase
                 
+                if(docSnap.exists())
+                {
+                   console.log(`Document data , id : ${docSnap.id} => data : ${JSON.stringify(docSnap.data())}`)
+                    setProductDetail({id : docSnap.id, ...docSnap.data()})
+                }
+                else 
+                {
+                    console.log("No such Document")
+                }   
             }
             
             catch (error) 

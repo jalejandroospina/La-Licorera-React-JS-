@@ -2,8 +2,10 @@ import React , {useState, useEffect} from 'react'
 import ItemList from '../../components/ItemList/ItemList'
 import { useParams } from 'react-router-dom';
 import {db} from '../../Firebase/config'
+import { collection, query, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
+  console.log(db);
 
   // const [state, setState]= useState ('Estado inicial') 
   // //variable,funcion setear estado = hook (valor inicial del estado)
@@ -20,13 +22,23 @@ const ItemListContainer = () => {
           {
               try 
               {
-                // console.log(db);
                 if(products.length === 0) // filtro lista de productos
                 {
-                  const response = await fetch(`/Mocks/products.json`) // fetch para traer el js de los productos
-                  const productsData = await response.json();
-                  setProducts(productsData);
 
+                  const productItem = [];
+                  const quer = query(collection(db, "products")); //query a db firestore
+                  const querySnapshot = await getDocs(quer);      //ejecución de la query
+                  querySnapshot.forEach((doc) => {               // snapshot (un array con todos los documentos)
+                  // console.log(doc.id, " => ", doc.data()) ;       // doc.id , id generado por firebase
+                  const product ={id: doc.id , ...doc.data()}      //array con info de documento en firebase
+                  productItem.push(product);
+                      });
+
+                  setProducts(productItem);       // seteo de estado con los productos en firebase
+                  // const response = await fetch(`/Mocks/products.json`) // fetch para traer el js de los productos
+                  // const productsData = await response.json();
+                  //
+                        console.log(products);
                 }
                 else
                 {                     //Filtro por categoria

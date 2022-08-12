@@ -1,67 +1,47 @@
 import React , {useState} from 'react'
+import './itemCount_styles.css'
 
-const ItemCount = ({stock, handleAddCart}) => {
-    const [cant,setCant]= useState(1)
+    const ItemCount = ({stock, handleAddCart}) => {
+        const [cant,setCant]= useState(1)
 
-const decrement = ()=>
-{
-    if (cant>stock)
+    const decrement = ()=>
     {
-        setCant (cant - 1)
-    } 
-}
-const add = ()=>
-{
-    if(cant<stock)
-    {
-        setCant (cant + 1)
+        if (cant > stock)
+        {
+            setCant (cant - 1)
+        } 
     }
-    
-}
-// const addCart = ()=>
-// {
-//     alert(`Agregado al carrito ${cant} productos`);
-// }
+    const add = ()=>
+    {
+        if(cant<stock)
+        {
+            setCant (cant + 1)
+        }
+        
+    }
 
   return (
     <>
-    <div style={{
-        marginTop:'60px',
-        marginBottom: '60px'
-        
-    }}>
+    <div className='buttons'>
+
         <button onClick={decrement}
             type="button" className="btn btn-danger">-
         </button>
 
-        <span
-            style={{
-                fontSize:'120%',
-                margin: '35px'
-            }}
-            >{cant}
-        </span>
+        <span className='quantity'> {cant} </span>
 
         <button onClick={add}
-            type="button" className="btn btn-primary">+
+            type="button" className="btn btn-secondary "> +
         </button>
 
 
         <button  onClick={() => handleAddCart(cant)}
-            style={{
-                marginTop:'7px',
-                
-                
-            }}
-            type="button" className="btn btn-warning">Agregar Al Carrito
+            type="button" className="btn btn-warning addCart">Agregar Al Carrito
         </button> 
         
     </div>
     </>
-           
-   
-            
-        
+              
   )
 }
 
