@@ -15,11 +15,11 @@ export default function NavBar()
         <div className="  pill-nav container-fluid">
 
             <span> <Link to="/" className="logo"> <h1>La Licorera</h1></Link> </span>
-            <span> <Link to="category/cerveza" className="menu">Cerveza</Link> </span>
-            <span> <Link to="category/ron" className="menu">Ron</Link> </span>
-            <span> <Link to="category/tequila" className="menu">Tequila</Link> </span>
-            <span> <Link to="category/vodka" className="menu">Vodka</Link> </span>
-            <span> <Link to="category/whisky" className="menu">Whisky</Link> </span>
+            <span> <Link to="category/Cerveza" className="menu">Cerveza</Link> </span>
+            <span> <Link to="category/Ron" className="menu">Ron</Link> </span>
+            <span> <Link to="category/Tequila" className="menu">Tequila</Link> </span>
+            <span> <Link to="category/Vodka" className="menu">Vodka</Link> </span>
+            <span> <Link to="category/Whisky" className="menu">Whisky</Link> </span>
             
             <CartWidget/> 
 

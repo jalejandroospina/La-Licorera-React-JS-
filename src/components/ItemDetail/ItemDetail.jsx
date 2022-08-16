@@ -34,9 +34,8 @@ const ItemDetail = ({ productDetail }) => {
                         </div>
                         <div className="col">
                             <div className='feactures'>
-                                
-                                <h3 className='product'>{productDetail.name}</h3>
                                 <p> {productDetail.category}</p>
+                                <h3 className='product'>{productDetail.name}</h3>
                                 <h4 className='description'>{productDetail.description}</h4>
                                 <p className='price'>COP ${productDetail.price}</p>
                                 {

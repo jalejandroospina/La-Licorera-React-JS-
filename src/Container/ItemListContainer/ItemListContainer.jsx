@@ -6,7 +6,7 @@ import { collection, query, getDocs } from "firebase/firestore";
 import Banners from '../../components/Banners/Banners'
 
 const ItemListContainer = () => {
-  console.log(db);
+  // console.log(db);
 
   // const [state, setState]= useState ('Estado inicial') 
   // //variable,funcion setear estado = hook (valor inicial del estado)
@@ -39,10 +39,12 @@ const ItemListContainer = () => {
                   // const response = await fetch(`/Mocks/products.json`) // fetch para traer el js de los productos
                   // const productsData = await response.json();
                   //
-                        console.log(products);
+                        // console.log(products);
                 }
                 else
-                {                     //Filtro por categoria
+                {  
+                  console.log(categoryId);
+                  //Filtro por categoria
                   let categoryFilter = [...products]; // array para pushear los productos por categoria
                   if(categoryId)
                   {

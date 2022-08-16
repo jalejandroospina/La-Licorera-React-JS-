@@ -11,6 +11,7 @@ import ItemCount from './components/ItemCount/ItemCount';
 import NotFound from './components/PageNotFound/NotFound';
 import ShopProvider from './context/Shop'; 
 import CartContainer from './Container/CartContainer/CartContainer';
+import CheckOut from './components/CheckOut/CheckOut';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
               <Route path='/category/:categoryId' element={<ItemListContainer/>}> </Route> 
               <Route path='/item/:itemId' element={<ItemDetailContainer/>}> </Route> 
               <Route path='/cart' element={<CartContainer/>}> </Route> 
+              <Route path='/checkout' element={<CheckOut/>} />
               <Route path='*' element={<NotFound/>}> </Route> 
             </Routes>
             {/* <ItemCount cant={1}/> */}
