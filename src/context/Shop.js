@@ -24,7 +24,7 @@ const addItem =  (item,cant)=>
     const quant = cant; // variable para distinguir de la propiedad del item count
 
     const finder = isInCart(item.id) // llamo a la funcion y le paso el id que viene del detail
-    // console.log(finder);
+   
 
     // 1. si se encuentra el producto ya agregado al carrito, entonces...
     if (finder)    

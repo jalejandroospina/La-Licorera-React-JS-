@@ -33,7 +33,7 @@ const CheckOut = () => {
       for (const item of cart)
       {
         const docRef = doc(db,"products", item.id);
-        // Llamada a Firbase
+        // Llamada a Firebase
         const docSnap = await getDoc(docRef);
 
         if(docSnap.exists())

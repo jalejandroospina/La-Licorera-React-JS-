@@ -22,42 +22,58 @@ const CartContainer = () => {
 
             {
             cart.length ? 
-            <>  
+            <> 
+                  <div className=" checkout">
+                     {/* Total */}
+                     <div className=' '>
+                        <span>  
+                           <h2>Total Compra</h2>
+                           <h3> $ {total}</h3>
+                           
+                           {/* <span> <button onClick={ClearCart}> Limpiar carrito</button> </span> */}
+                           <span> 
+                              <button onClick={handlePurchase} className ='mt-4 btn btn-warning' >Confirmar comprar</button>  
+                           </span> 
+                        </span>
+                     </div>
+                   </div> 
                {cart.map (product => 
                   {
                      return (
                                  
-                     <div  className='container mt-4  mb-4 ' key={product.id}>
+                     <div  className='list  mt-4  mb-4 ' key={product.id}>
                         <div className='row'>
                            <div className='col mt-2 mb-2'>
-                           <img  src={product.image} alt="product-image"/>
+                              <img  src={product.image} alt="product-image"/>
+                           </div>
+
+                           <div className='col product-feactures'>
+                              <h3>{product.name}</h3>
+                              <h5>{product.description}</h5>
+                              
+                           </div>
+                           <div className='col product-feactures'>
+                              <h5>${product.price}</h5>
+                           </div>
+             
+                           <div className='col remove'>
+                              <h4>x {product.cant}</h4>
+                              <button onClick={()=> removeItem(product.id)} className ='ms-4 btn btn-danger'>X</button> 
+                           </div>
+
+                           <div className='col remove'>
+                             
+                           </div>
+
                         </div>
 
-                        <div className='col product-feactures'>
-                           <h2>{product.name}</h2>
-                           <h5>{product.description}</h5>
-                           <h5>${product.price}</h5>
-                        </div>
-                                          
-                        <div className='col product-feactures'>
-                           <h4>Cantidad : {product.cant}</h4>
-                        </div>
-
-                        <div className='col product-feactures'>
-                           <button onClick={()=> removeItem(product.id)} className ='btn btn-danger'>X</button>
-                        </div>
+                           
 
                      </div>
-
-         </div>
                
                   )}
                )}
-                  <div className='container mt-4 mb-4'>
-                  <h3>Total : $ {total}</h3>
-                  <button onClick={ClearCart}> Limpiar carrito</button>
-                  <button onClick={handlePurchase}>Confirmar comprar</button> 
-                  </div>
+                              
             </> 
             : 
             <>

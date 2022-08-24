@@ -16,7 +16,6 @@ const ItemDetailContainer = () => {
         {
             try 
             {
-                // https://pokeapi.co/api/v2/pokemon/93
                 const docRef = doc(db,"products", itemId) // query a Firebase, item dinamico
                 const docSnap = await getDoc(docRef); // llamada a Firebase
                 

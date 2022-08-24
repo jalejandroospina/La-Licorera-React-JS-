@@ -15,7 +15,7 @@ const ItemDetail = ({ productDetail }) => {
 
     const OnAddCart =(cant)=>  // funcion agregar al carrito
     { 
-        console.log("Agregado(s) al carrito",cant);
+       
         setCantAdd(cant);
         addItem(productDetail,cant);  // envio de variables a context
     }
@@ -44,8 +44,8 @@ const ItemDetail = ({ productDetail }) => {
                                 :
                                  <>
                                  <div>
-                                    <button className='btn btn-danger mt-5' type="button" onClick={onConfirm} >Terminar mi compra</button> 
-                                    <button className='btn btn-secondary mt-5 ms-2' type="button" onClick={onConfirm} >Seguir Comprando</button>
+                                     <button className='btn btn-warning mt-5 ' type="button"  >Seguir Comprando</button>
+                                    <button className='btn btn-danger mt-5 ms-2' type="button" onClick={onConfirm} >Terminar mi compra</button> 
                                  </div>
                                  </>
                                 }

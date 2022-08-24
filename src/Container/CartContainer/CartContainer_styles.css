@@ -16,5 +16,30 @@
    align-items: center;
    align-content: center;
    flex-wrap: wrap;
+   
 
+}
+.remove
+{
+    display: flex;
+    justify-content: flex-start;
+    
+    align-content: center;
+    flex-wrap: wrap; 
+}
+.list
+{
+    width: 70vw;
+    position: relative;
+    left:60px;
+    right: 10px;
+    background-color: ghostwhite;
+}
+.checkout
+{
+    width: 30vw;
+    position: absolute;
+    left: 1050px;
+    top: 150px;
+    
 }
