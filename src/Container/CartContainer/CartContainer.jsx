@@ -9,7 +9,7 @@ import './CartContainer_styles.css'
 const CartContainer = () => {
 
    const navigate = useNavigate();
-   const {cart , total, removeItem, ClearCart} = useContext(ShopData);
+   const {cart , total, removeItem} = useContext(ShopData);
 
    const handlePurchase = ()=>
    {
@@ -44,7 +44,7 @@ const CartContainer = () => {
                      <div  className='list  mt-4  mb-4 ' key={product.id}>
                         <div className='row'>
                            <div className='col mt-2 mb-2'>
-                              <img  src={product.image} alt="product-image"/>
+                              <img  src={product.image} alt="product"/>
                            </div>
 
                            <div className='col product-feactures'>
