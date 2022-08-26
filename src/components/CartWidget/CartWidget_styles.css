@@ -1,13 +1,11 @@
 .cart
 {
-  
   position: absolute;
   right: 100px;
   background-color: transparent;
   border-color:transparent ;
   color: orange;
   margin-top: 16px;
- 
 }
 .cart:hover
 {
