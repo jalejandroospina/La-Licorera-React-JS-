@@ -30,7 +30,7 @@ const ItemListContainer = () => {
                   if(categoryId)
                   {
                     console.log(categoryId);
-                    categoryFilter = products.filter(product => product.category == categoryId) // filtro por categoria
+                    categoryFilter = products.filter(product => product.category === categoryId) // filtro por categoria
                   } 
                   setProducts(categoryFilter); // seteo de estado con la lista de  productos           
                 } 
