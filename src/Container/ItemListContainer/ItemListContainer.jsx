@@ -42,7 +42,7 @@ const ItemListContainer = () => {
           }
           getProducts(); 
         
-      }, [categoryId])
+      }, [categoryId,products])
         
   return (
     <>
