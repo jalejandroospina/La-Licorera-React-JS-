@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate , Link} from 'react-router-dom'
 import { ShopData } from '../../context/Shop'
 import './CartContainer_styles.css'
 
@@ -79,7 +79,8 @@ const CartContainer = () => {
             <>
             <div className='cart-display'>
                <h3 >El carrito está vacío</h3>
-               <button> Ir a comprar</button>
+               
+               <Link to="/"> <button className='btn btn-warning mt-5'> Ir a comprar </button>    </Link>
             </div>
             </>
          }

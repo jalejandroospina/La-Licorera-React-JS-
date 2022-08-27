@@ -5,10 +5,11 @@
     margin: 20px;
     text-align: center;
     font-family:"arial" ;
+
   }
  .card:hover
  {
-
+  cursor: pointer;
   transform: scale(1.05,1.05);
  }
   

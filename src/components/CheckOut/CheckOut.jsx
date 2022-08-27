@@ -53,7 +53,7 @@ const CheckOut = () => {
         }
       }
 
-      Swal.fire("Orden Ingresada , Numero", docRef.id)
+      Swal.fire("Orden Generada", docRef.id)
       ClearCart();
 
     }
@@ -70,19 +70,19 @@ const CheckOut = () => {
     <div className='container'>
     <form className='p-5' onSubmit={handleSubmit}>
             <div className="mb-3">
-                <label htmlFor="name" className="form-label">Name</label>
+                <label htmlFor="name" className="form-label">Nombres y Apellidos</label>
                 <input type="text" className="form-control" id="exampleInputPassword1" value={name} onChange={e => setName(e.target.value)} />
             </div>
             <div className="mb-3">
-                <label htmlFor="email" className="form-label">Email address</label>
+                <label htmlFor="email" className="form-label">Correo electrónico</label>
                 <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={email} onChange={e => setEmail(e.target.value)} />
             </div>
             <div className="mb-3">
-                <label htmlFor="repeatEmail" className="form-label">Repeat email address</label>
+                <label htmlFor="repeatEmail" className="form-label">Confirmar correo electónico</label>
                 <input type="email" className="form-control" id="repeatEmail" aria-describedby="emailHelp" value={verifyEmail} onChange={e => setVerifyEmail(e.target.value)} />
             </div>
 
-            <button  className="btn btn-primary">Submit</button>
+            <button  className="btn btn-warning">Continuar</button>
         </form>
 
     </div>

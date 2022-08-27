@@ -1,6 +1,6 @@
 import React from 'react'
 import './Item_styles.css'
-import { useNavigate,} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 
 
 
@@ -12,11 +12,10 @@ const Item = ({product}) =>  // recibe prop producto
 
   const handleNavigate = (id) =>
   {
-    navigate(`item/${id}`)
-
-   
+    navigate(`/item/${id}`)
+ 
   }
-  
+   
 
 
 
@@ -25,17 +24,17 @@ const Item = ({product}) =>  // recibe prop producto
   
     
 <>
-<div className="">
+<div onClick={()=>handleNavigate(product.id)}>
 
     <div className="card">
-    <p className='category'>{product.category}</p>
+        <p className='category'>{product.category}</p>
         <img src={product.image} alt="Product" /> 
         
         <h2 className='product'>{product.name}</h2>
         <p className="description">{product.description}</p>
         <p className="price">COP ${product.price}</p>
         
-        <p><button className="" onClick={()=>handleNavigate(product.id)}>Ver Producto</button></p>
+        <p><button  onClick={()=>handleNavigate(product.id)}>Ver Producto</button></p>
     </div> 
 
 </div>

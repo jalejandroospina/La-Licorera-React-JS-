@@ -1,5 +1,5 @@
 import React , {useContext, useState} from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './ItemDetail_styles.css'
 import ItemCount from '../ItemCount/ItemCount'
 import { ShopData } from '../../context/Shop';
@@ -44,7 +44,8 @@ const ItemDetail = ({ productDetail }) => {
                                 :
                                  <>
                                  <div>
-                                     <button className='btn btn-warning mt-5 ' type="button"  >Seguir Comprando</button>
+                                    <Link to="/">  <button className='btn btn-warning mt-5 ' type="button"  >Seguir Comprando</button></Link>
+                                    
                                     <button className='btn btn-danger mt-5 ms-2' type="button" onClick={onConfirm} >Terminar mi compra</button> 
                                  </div>
                                  </>

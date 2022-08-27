@@ -1,13 +1,18 @@
 import React from 'react'
-
 import Wisky from '../../images/Wisky-Banner.jpg' 
 import Vodka from '../../images/Vodka-Banner.jpg'
 import Beer from '../../images/Beer-Banner.jpg' 
 import '../Banners/Banners_styles.css';
-
+import { useNavigate } from 'react-router-dom';
 
 export default function Banners()
 {
+  const navigate = useNavigate();
+
+  const handleNavigate = (id) => {
+    navigate(`/item/${id}`)
+  }
+
   return (
     <>
     <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
@@ -19,14 +24,14 @@ export default function Banners()
       </div>
 
       <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img src={Wisky} className="d-block w-100" alt="Wiskey"/>
+        <div className="carousel-item active" >
+          <img src={Wisky}  onClick = {()=> handleNavigate("4hD94ZFxR9wGTPmI3wbJ")} className=" banner d-block w-100" alt="Black Label"/>
         </div>
         <div className="carousel-item">
-          <img src={Vodka} className="d-block w-100" alt="..."/>
+          <img src={Vodka}  onClick = {()=> handleNavigate("uWhiYvdenJrOYrkHcdv0")} className="banner d-block w-100" alt="Absolute"/>
         </div>
         <div className="carousel-item">
-          <img src={Beer} className="d-block w-100" alt="..."/>
+          <img src={Beer} onClick = {()=> handleNavigate("zfD1P9WjKqMEvnVTnXUb")} className="banner d-block w-100 " alt="Corona"/>
         </div>
       </div>
 

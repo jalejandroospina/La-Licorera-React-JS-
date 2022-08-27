@@ -12,6 +12,7 @@ const ItemListContainer = () => {
       const [products, setProducts] = useState([]) // estado para setear la lista con los productos
       const {categoryId} = useParams(); // obtener prop categoria
       
+      
       useEffect(()=> 
       {
         const getProducts = async()=> 
@@ -21,7 +22,8 @@ const ItemListContainer = () => {
                 if(products.length === 0) // filtro lista de productos
                 {
                   const products = await getCollection("products")
-                  setProducts(products);       // seteo de estado con los productos en firebase       
+                  setProducts(products);       // seteo de estado con los productos en firebase
+                  
                 }
                 else
                 {  
@@ -31,8 +33,11 @@ const ItemListContainer = () => {
                   {
                     console.log(categoryId);
                     categoryFilter = products.filter(product => product.category === categoryId) // filtro por categoria
+                    
                   } 
-                  setProducts(categoryFilter); // seteo de estado con la lista de  productos           
+                  
+                  setProducts(categoryFilter); // seteo de estado con la lista de  productos
+                         
                 } 
               } 
               catch (error) 
@@ -46,9 +51,13 @@ const ItemListContainer = () => {
         
   return (
     <>
-      <Banners/>
-      <ItemList products={products}/>
+      
+       
+       
+        <ItemList products={products}/>
+     
     </>
+      
   )
 }
 
