@@ -1,3 +1,14 @@
+.welcome
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    width: 100vw;
+    text-align: center;
+    color: white;
+    background-color: orange;
+}
 .banner
 {
     

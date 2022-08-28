@@ -15,7 +15,8 @@ export default function Banners()
 
   return (
     <>
-    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+    
+    <div id="carouselExampleIndicators" className="carousel slide " data-bs-ride="carousel">
 
       <div className="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -44,8 +45,10 @@ export default function Banners()
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
+      
 
     </div>
+    
 
     </>
   )

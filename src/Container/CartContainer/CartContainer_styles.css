@@ -37,9 +37,13 @@
 }
 .checkout
 {
-    width: 30vw;
+    width: 40vw;
     position: absolute;
-    left: 1050px;
+    left: 1030px;
     top: 150px;
-    
+}
+.price
+{
+    color: red;
+    font-size: 200%;
 }

@@ -53,13 +53,24 @@ const CheckOut = () => {
         }
       }
 
-      Swal.fire("Orden Generada", docRef.id)
+      // Swal.fire("Orden Generada", docRef.id)
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Orden Generada',
+        html: docRef.id,
+        confirmButtonColor: "orange"
+      })
       ClearCart();
 
     }
     else
     {
-      Swal.fire("Uno de los campos es invalido")
+      Swal.fire({
+        icon: 'error',
+        title: 'Uno de los campos es invalido',
+        confirmButtonColor: "orange"
+    })
     }
   }
 
@@ -83,6 +94,7 @@ const CheckOut = () => {
             </div>
 
             <button  className="btn btn-warning">Continuar</button>
+            
         </form>
 
     </div>
