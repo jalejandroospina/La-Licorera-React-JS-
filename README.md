@@ -8,7 +8,7 @@ Realizado con  React JS
 
 ### `Diseño`
 
-Boostrap y CSS,SweetAlert2
+Boostrap y CSS, SweetAlert2
 
 ### `Lenguaje`
 

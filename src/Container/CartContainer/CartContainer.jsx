@@ -30,7 +30,7 @@ const CartContainer = () =>
                      <div> 
                         <div>
                            <h2>Total Compra </h2>
-                           <p className='price'>${total}</p>
+                           <p className='price'>COP ${total}</p>
                         </div> 
                         <div>
                            <p>Total Articulos :  {totalItems}</p>
@@ -58,7 +58,7 @@ const CartContainer = () =>
                            
                         </div>
                         <div className='col product-feactures'>
-                           <h5>${product.price}</h5>
+                           <h5>COP ${product.price}</h5>
                         </div>
           
                         <div className='col remove'>
