@@ -12,10 +12,7 @@ const ItemList = ({products}) => { //recibe prop  productos
         }
 
     </div>
-   
 
-
-  
   )
 }
 

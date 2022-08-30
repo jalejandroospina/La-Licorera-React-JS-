@@ -6,14 +6,14 @@ import './itemCount_styles.css'
 
     const decrement = ()=>
     {
-        if (cant > stock)
+        if (cant > 1 )
         {
             setCant (cant - 1)
         } 
     }
     const add = ()=>
     {
-        if(cant<stock)
+        if(cant < stock)
         {
             setCant (cant + 1)
         }
@@ -21,28 +21,28 @@ import './itemCount_styles.css'
     }
 
   return (
-    <>
-    <div className='buttons'>
+            <>
+            <div className='buttons'>
 
-        <button onClick={decrement}
-            type="button" className="btn btn-danger">-
-        </button>
+                <button onClick={decrement}
+                    type="button" className="btn btn-danger"> -
+                </button>
 
-        <span className='quantity'> {cant} </span>
+                <span className='quantity'> {cant} </span>
 
-        <button onClick={add}
-            type="button" className="btn btn-secondary "> +
-        </button>
+                <button onClick={add}
+                    type="button" className="btn btn-secondary "> +
+                </button>
 
 
-        <button  onClick={() => handleAddCart(cant)}
-            type="button" className="btn btn-warning addCart">Agregar Al Carrito
-        </button> 
-        
-    </div>
-    </>
+                <button  onClick={() => handleAddCart(cant)}
+                    type="button" className="btn btn-warning addCart">Agregar Al Carrito
+                </button> 
+                
+            </div>
+            </>
               
-  )
+         )
 }
 
 export default ItemCount

@@ -5,6 +5,7 @@ import { db } from '../../Firebase/config';
 import { doc, updateDoc } from "firebase/firestore";
 import Swal from 'sweetalert2';
 import { ShopData  } from '../../context/Shop';
+import {useNavigate} from 'react-router-dom'
 
 
 const CheckOut = () => {
@@ -13,8 +14,13 @@ const CheckOut = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [verifyEmail, setVerifyEmail] = useState("");
+  const {cart, ClearCart, total} = useContext(ShopData); // consumo de contexto
+  const navigate = useNavigate();
 
-  const {cart, ClearCart, total} = useContext(ShopData); // consumo de cotexto
+  const handleEnd = ()=>
+  {
+     navigate ('/');
+  }
 
   const handleSubmit = async(e)=>
   {
@@ -53,24 +59,29 @@ const CheckOut = () => {
         }
       }
 
-      // Swal.fire("Orden Generada", docRef.id)
-
       Swal.fire({
         icon: 'success',
         title: 'Orden Generada',
         html: docRef.id,
         confirmButtonColor: "orange"
-      })
+      }).then(function (isConfirm)
+        {
+         
+          handleEnd();
+        })
+      
       ClearCart();
+
 
     }
     else
     {
-      Swal.fire({
+      Swal.fire
+      ({
         icon: 'error',
         title: 'Uno de los campos es invalido',
         confirmButtonColor: "orange"
-    })
+      })
     }
   }
 
@@ -80,6 +91,7 @@ const CheckOut = () => {
     <>
     <div className='container'>
     <form className='p-5' onSubmit={handleSubmit}>
+      <h1 className='mb-4'>Ingresa tus datos</h1>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label">Nombres y Apellidos</label>
                 <input type="text" className="form-control" id="exampleInputPassword1" value={name} onChange={e => setName(e.target.value)} />
@@ -93,7 +105,7 @@ const CheckOut = () => {
                 <input type="email" className="form-control" id="repeatEmail" aria-describedby="emailHelp" value={verifyEmail} onChange={e => setVerifyEmail(e.target.value)} />
             </div>
 
-            <button  className="btn btn-warning">Continuar</button>
+            <button  className="btn btn-warning" >Continuar</button>
             
         </form>
 

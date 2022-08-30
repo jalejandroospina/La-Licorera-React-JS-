@@ -20,7 +20,6 @@ const isInCart =(productId) =>  //funcion para ver si el item ya esta en el carr
 
 const addItem =  (item,cant)=>
 {
-    // console.log("vars recibidas",item,cant)
     const quant = cant; // variable para distinguir de la propiedad del item count
 
     const finder = isInCart(item.id) // llamo a la funcion y le paso el id que viene del detail
@@ -75,11 +74,6 @@ const addItem =  (item,cant)=>
             0)
         setTotalItems(totalItems)
     }, [cart])
-
-
-
-
-
 
 
 

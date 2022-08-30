@@ -65,13 +65,7 @@ const CartContainer = () =>
                            <h4>x {product.cant}</h4>
                            <button onClick={()=> removeItem(product.id)} className ='ms-4 btn btn-danger'>X</button> 
                         </div>
-
-                        
-
                      </div>
-
-                        
-
                   </div>
             
                )}
@@ -91,12 +85,7 @@ const CartContainer = () =>
       </div>
    )
       
-    
-        
-      
-       
      
-       
 }
 export default CartContainer
 
